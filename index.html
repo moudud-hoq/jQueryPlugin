@@ -23,12 +23,24 @@
     <section class="my-10 w-11/12 mx-auto">
         <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Slick Slider</h2>
         <div class="slider">
-            <div><img src="https://via.placeholder.com/600x300?text=Slide+1" class="rounded-lg shadow-lg mx-auto"
-                    alt="Slide 1"></div>
-            <div><img src="https://via.placeholder.com/600x300?text=Slide+2" class="rounded-lg shadow-lg mx-auto"
-                    alt="Slide 2"></div>
-            <div><img src="https://via.placeholder.com/600x300?text=Slide+3" class="rounded-lg shadow-lg mx-auto"
-                    alt="Slide 3"></div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
+            </div>
+            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
+            </div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
+            </div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
+            </div>
+            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
+            </div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
+            </div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
+            </div>
+            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
+            </div>
+            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
+            </div>
         </div>
     </section>
 
@@ -36,14 +48,14 @@
     <section class="my-16 w-11/12 mx-auto">
         <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Image Popup Gallery</h2>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://via.placeholder.com/800x600?text=Image+1" class="popup-link w-48">
-                <img src="https://via.placeholder.com/300x200?text=Thumb+1" class="rounded-lg shadow-md" alt="Thumb 1">
+            <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
+                <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 1">
             </a>
-            <a href="https://via.placeholder.com/800x600?text=Image+2" class="popup-link w-48">
-                <img src="https://via.placeholder.com/300x200?text=Thumb+2" class="rounded-lg shadow-md" alt="Thumb 2">
+            <a href="https://picsum.photos/id/1021/400/300" class="popup-link w-48">
+                <img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-md" alt="Thumb 2">
             </a>
-            <a href="https://via.placeholder.com/800x600?text=Image+3" class="popup-link w-48">
-                <img src="https://via.placeholder.com/300x200?text=Thumb+3" class="rounded-lg shadow-md" alt="Thumb 3">
+            <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
+                <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 3">
             </a>
         </div>
     </section>
@@ -62,18 +74,25 @@
             <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
                 <h3 class="text-xl font-semibold">Item 1</h3>
                 <p>Category 1 Content</p>
+                <img src="https://picsum.photos/id/1020/400/300" alt="Category 1" class="w-full h-auto">
+
             </div>
             <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
                 <h3 class="text-xl font-semibold">Item 2</h3>
                 <p>Category 2 Content</p>
+                <img src="https://picsum.photos/id/1018/400/300" alt="Category 3" class="w-full h-auto">
+
             </div>
             <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
                 <h3 class="text-xl font-semibold">Item 3</h3>
                 <p>Category 1 Content</p>
+                <img src="https://picsum.photos/id/1016/400/300" alt="Category 2" class="w-full h-auto">
             </div>
             <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
                 <h3 class="text-xl font-semibold">Item 4</h3>
                 <p>Category 2 Content</p>
+                <img src="https://picsum.photos/id/1015/400/300" alt="Category 1" class="w-full h-auto">
+
             </div>
         </div>
 
@@ -106,6 +125,38 @@
     <!-- Custom JS -->
     <script>
         $(document).ready(function () {
+            //Slick Carousel
+            $('.slider').slick({
+                arrows: true,
+                autoplay: true,
+                dots: true,
+                autoplaySpeed: 2000,
+            });
+
+            // Magnific Popup
+            $('.popup-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+
+            // Isotope Grid
+            var $grid = $('#isotope-grid').isotope({
+                itemSelector: '.cat1, .cat2',
+                layoutMode: 'fitRows'
+            });
+
+            $('.filter-btn').on('click', function () {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
+
+            // AOS Animation
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
 
         });
     </script>
