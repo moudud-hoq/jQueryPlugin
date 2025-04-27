@@ -15,88 +15,111 @@
 
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 </head>
 
 <body class="bg-gray-100">
 
-    <!-- ===== Slider Section ===== -->
-    <section class="my-10 w-11/12 mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Slick Slider</h2>
-        <div class="slider">
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
+    <div class="main h-full">
+        <!-- ===== Slider Section ===== -->
+        <section class="my-10 w-11/12 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Slick Slider</h2>
+            <div class="slider">
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 1">
+                </div>
+                <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 2">
+                </div>
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 3">
+                </div>
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 1">
+                </div>
+                <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 2">
+                </div>
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 3">
+                </div>
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 1">
+                </div>
+                <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 2">
+                </div>
+                <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto"
+                        alt="Slide 3">
+                </div>
             </div>
-            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
-            </div>
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
-            </div>
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
-            </div>
-            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
-            </div>
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
-            </div>
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 1">
-            </div>
-            <div><img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 2">
-            </div>
-            <div><img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-lg mx-auto" alt="Slide 3">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== Gallery Section ===== -->
-    <section class="my-16 w-11/12 mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Image Popup Gallery</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
-                <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 1">
-            </a>
-            <a href="https://picsum.photos/id/1021/400/300" class="popup-link w-48">
-                <img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-md" alt="Thumb 2">
-            </a>
-            <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
-                <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 3">
-            </a>
-        </div>
-    </section>
-
-    <!-- ===== Isotope Filter Section ===== -->
-    <section class="my-16 w-11/12 mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Grid + Filter</h2>
-
-        <div class="flex justify-center gap-4 mb-8">
-            <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter="*">All</button>
-            <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter=".cat1">Category 1</button>
-            <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter=".cat2">Category 2</button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="isotope-grid">
-            <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-semibold">Item 1</h3>
-                <p>Category 1 Content</p>
-                <img src="https://picsum.photos/id/1020/400/300" alt="Category 1" class="w-full h-auto">
-
+        <!-- ===== Gallery Section ===== -->
+        <section class="my-16 w-11/12 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Image Popup Gallery</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
+                    <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 1">
+                </a>
+                <a href="https://picsum.photos/id/1021/400/300" class="popup-link w-48">
+                    <img src="https://picsum.photos/id/1021/400/300" class="rounded-lg shadow-md" alt="Thumb 2">
+                </a>
+                <a href="https://picsum.photos/id/1022/400/300" class="popup-link w-48">
+                    <img src="https://picsum.photos/id/1022/400/300" class="rounded-lg shadow-md" alt="Thumb 3">
+                </a>
             </div>
-            <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-semibold">Item 2</h3>
-                <p>Category 2 Content</p>
-                <img src="https://picsum.photos/id/1018/400/300" alt="Category 3" class="w-full h-auto">
+        </section>
 
-            </div>
-            <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-semibold">Item 3</h3>
-                <p>Category 1 Content</p>
-                <img src="https://picsum.photos/id/1016/400/300" alt="Category 2" class="w-full h-auto">
-            </div>
-            <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-semibold">Item 4</h3>
-                <p>Category 2 Content</p>
-                <img src="https://picsum.photos/id/1015/400/300" alt="Category 1" class="w-full h-auto">
+        <!-- ===== Isotope Filter Section ===== -->
+        <section class="my-16 w-11/12 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Grid + Filter</h2>
 
+            <div class="flex justify-center gap-4 mb-8">
+                <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter="*">All</button>
+                <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter=".cat1">Category
+                    1</button>
+                <button class="filter-btn bg-blue-500 text-white px-4 py-2 rounded" data-filter=".cat2">Category
+                    2</button>
             </div>
-        </div>
 
-    </section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="isotope-grid">
+                <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold">Item 1</h3>
+                    <p>Category 1 Content</p>
+                    <img src="https://picsum.photos/id/1020/400/300" alt="Category 1" class="w-full h-auto">
+
+                </div>
+                <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold">Item 2</h3>
+                    <p>Category 2 Content</p>
+                    <img src="https://picsum.photos/id/1018/400/300" alt="Category 3" class="w-full h-auto">
+
+                </div>
+                <div class="cat1 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold">Item 3</h3>
+                    <p>Category 1 Content</p>
+                    <img src="https://picsum.photos/id/1016/400/300" alt="Category 2" class="w-full h-auto">
+                </div>
+                <div class="cat2 bg-white p-6 rounded shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold">Item 4</h3>
+                    <p>Category 2 Content</p>
+                    <img src="https://picsum.photos/id/1015/400/300" alt="Category 1" class="w-full h-auto">
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== Bangladesh Mosque Map Section ===== -->
+        <section class="my-[460px] w-11/12 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Bangladesh Mosques Map</h2>
+            <div id="mosque-map" class="w-full h-[500px] rounded-lg shadow-lg"></div>
+        </section>
+    </div>
 
     <!-- ===== Footer ===== -->
     <footer class="text-center py-6 bg-gray-800 text-white">
@@ -120,6 +143,9 @@
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 
     <!-- Custom JS -->
@@ -165,6 +191,168 @@
             });
 
         });
+
+        // Leaflet Map
+        var mosqueMap = L.map('mosque-map').setView([23.6850, 90.3563], 6); // Centered to Bangladesh
+
+        // Map Tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mosqueMap);
+
+        // Mosque Locations
+        var mosques = [
+            {
+                name: "Baitul Mukarram National Mosque",
+                coords: [23.7286, 90.4125]
+            },
+            {
+                name: "Sixty Dome Mosque (Shat Gombuj Masjid)",
+                coords: [22.6740, 89.7924]
+            },
+            {
+                name: "Choto Sona Mosque",
+                coords: [24.9017, 88.2743]
+            },
+            {
+                name: "Star Mosque (Tara Masjid)",
+                coords: [23.7139, 90.3992]
+            },
+            {
+                name: "Kusumba Mosque",
+                coords: [24.7941, 88.5907]
+            },
+            {
+                name: "Bagha Mosque",
+                coords: [24.1975, 88.7681]
+            },
+            {
+                name: "Khan Mohammad Mridha Mosque",
+                coords: [23.7186, 90.3974]
+            },
+            {
+                name: "Shah Jalal Mosque",
+                coords: [24.8998, 91.8719]
+            },
+            {
+                name: "Shah Paran Mosque",
+                coords: [24.8917, 91.8833]
+            },
+            {
+                name: "Baba Adam Mosque",
+                coords: [23.6465, 90.5054]
+            },
+            {
+                name: "Darasbari Mosque",
+                coords: [24.8583, 88.1333]
+            },
+            {
+                name: "Chhota Pandua Mosque",
+                coords: [23.0833, 88.2667]
+            },
+            {
+                name: "Pathrail Mosque",
+                coords: [23.5533, 89.8417]
+            },
+            {
+                name: "Goaldi Mosque",
+                coords: [23.6436, 90.5114]
+            },
+            {
+                name: "Shait Gambuj Mosque",
+                coords: [22.6740, 89.7924]
+            },
+            {
+                name: "Nine Dome Mosque",
+                coords: [22.6740, 89.7924]
+            },
+            {
+                name: "Bibi Begni Mosque",
+                coords: [22.6740, 89.7924]
+            },
+            {
+                name: "Ronvijoypur Mosque",
+                coords: [22.6740, 89.7924]
+            },
+            {
+                name: "Zinda Pir Mosque",
+                coords: [23.7104, 90.4074]
+            },
+            {
+                name: "Chandanpura Mosque",
+                coords: [22.3351, 91.8347]
+            },
+            {
+                name: "Bayazid Bostami Mosque",
+                coords: [22.3744, 91.8123]
+            },
+            {
+                name: "Anderkilla Shahi Jame Mosque",
+                coords: [22.3384, 91.8347]
+            },
+            {
+                name: "Kasba Mosque",
+                coords: [23.7206, 91.1121]
+            },
+            {
+                name: "Shah Niamatullah Mosque",
+                coords: [24.8583, 88.1333]
+            },
+            {
+                name: "Lalbagh Fort Mosque",
+                coords: [23.7181, 90.3884]
+            },
+            {
+                name: "Chhota Katra Mosque",
+                coords: [23.7099, 90.4071]
+            },
+            {
+                name: "Boro Katra Mosque",
+                coords: [23.7098, 90.4070]
+            },
+            {
+                name: "Shah Sultan Mosque",
+                coords: [24.7500, 89.3750]
+            },
+            {
+                name: "Shah Mokhdum Mosque",
+                coords: [24.3667, 88.6000]
+            },
+            {
+                name: "Shah Jalal Dargah Mosque",
+                coords: [24.8998, 91.8719]
+            },
+
+            {
+                name: "Keramatia Mosque",
+                coords: [25.7439, 89.2752]
+            },
+            {
+                name: "Nilphamari Central Mosque",
+                coords: [25.9310, 88.8560]
+            },
+            {
+                name: "Lalmonirhat Central Mosque",
+                coords: [25.9170, 89.4500]
+            },
+            {
+                name: "Tangail Central Mosque",
+                coords: [24.2513, 89.9200]
+            },
+            {
+                name: "Baitul Mukarram National Mosque",
+                coords: [23.7286, 90.4125]
+            },
+
+        ];
+
+        // Add markers
+        mosques.forEach(function (mosque) {
+            L.marker(mosque.coords).addTo(mosqueMap)
+                .bindPopup(`<b>${mosque.name}</b>`)
+                .openPopup();
+        });
+
     </script>
 </body>
 

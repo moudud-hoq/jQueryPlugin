@@ -191,6 +191,9 @@
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
   }
+  .my-\[460px\] {
+    margin-block: 460px;
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -206,8 +209,14 @@
   .grid {
     display: grid;
   }
+  .h-\[500px\] {
+    height: 500px;
+  }
   .h-auto {
     height: auto;
+  }
+  .h-full {
+    height: 100%;
   }
   .w-11\/12 {
     width: calc(11/12 * 100%);
