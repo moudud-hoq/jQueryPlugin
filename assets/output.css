@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -190,6 +191,9 @@
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -245,6 +249,13 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
@@ -268,6 +279,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -347,6 +361,11 @@
   syntax: "*";
   inherits: false;
   initial-value: skewY(0);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -481,6 +500,7 @@
       --tw-rotate-z: rotateZ(0);
       --tw-skew-x: skewX(0);
       --tw-skew-y: skewY(0);
+      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
