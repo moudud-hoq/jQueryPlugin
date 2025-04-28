@@ -209,6 +209,9 @@
   .grid {
     display: grid;
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
   .h-\[500px\] {
     height: 500px;
   }
@@ -217,6 +220,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
   }
   .w-11\/12 {
     width: calc(11/12 * 100%);

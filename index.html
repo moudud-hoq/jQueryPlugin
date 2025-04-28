@@ -160,9 +160,13 @@
                 centerMode: true,
                 centerPadding: '60px',
                 slidesToShow: 3,
-                nextArrow: '<button type="button" class="slick-next absolute top-1/2 right-4 transform -translate-y-2/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg">></button>',
-                prevArrow: '<button type="button" class="slick-prev absolute top-1/2 left-4 transform -translate-y-2/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg"><</button>',
+                nextArrow: '<button type="button" class="slick-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg">></button>',
+                prevArrow: '<button type="button" class="slick-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg"><</button>',
                 dotsClass: 'slick-dots flex justify-center mt-4 gap-4 border-t-2 border-gray-300 pt-4',
+                customPaging: function (slider, i) {
+                    return '<button class="w-3 h-3 rounded-full bg-blue-500 slick-active:bg-green-500"></button>';
+                },
+
             });
 
             // Magnific Popup
@@ -203,154 +207,25 @@
         // Mosque Locations
         var mosques = [
             {
-                name: "Baitul Mukarram National Mosque",
+                name: "Baitul Mukarram National Mosque, Dhaka",
                 coords: [23.7286, 90.4125]
             },
             {
                 name: "Sixty Dome Mosque (Shat Gombuj Masjid)",
                 coords: [22.6740, 89.7924]
             },
-            {
-                name: "Choto Sona Mosque",
-                coords: [24.9017, 88.2743]
-            },
-            {
-                name: "Star Mosque (Tara Masjid)",
-                coords: [23.7139, 90.3992]
-            },
-            {
-                name: "Kusumba Mosque",
-                coords: [24.7941, 88.5907]
-            },
-            {
-                name: "Bagha Mosque",
-                coords: [24.1975, 88.7681]
-            },
-            {
-                name: "Khan Mohammad Mridha Mosque",
-                coords: [23.7186, 90.3974]
-            },
-            {
-                name: "Shah Jalal Mosque",
-                coords: [24.8998, 91.8719]
-            },
-            {
-                name: "Shah Paran Mosque",
-                coords: [24.8917, 91.8833]
-            },
-            {
-                name: "Baba Adam Mosque",
-                coords: [23.6465, 90.5054]
-            },
-            {
-                name: "Darasbari Mosque",
-                coords: [24.8583, 88.1333]
-            },
-            {
-                name: "Chhota Pandua Mosque",
-                coords: [23.0833, 88.2667]
-            },
-            {
-                name: "Pathrail Mosque",
-                coords: [23.5533, 89.8417]
-            },
-            {
-                name: "Goaldi Mosque",
-                coords: [23.6436, 90.5114]
-            },
-            {
-                name: "Shait Gambuj Mosque",
-                coords: [22.6740, 89.7924]
-            },
-            {
-                name: "Nine Dome Mosque",
-                coords: [22.6740, 89.7924]
-            },
-            {
-                name: "Bibi Begni Mosque",
-                coords: [22.6740, 89.7924]
-            },
-            {
-                name: "Ronvijoypur Mosque",
-                coords: [22.6740, 89.7924]
-            },
-            {
-                name: "Zinda Pir Mosque",
-                coords: [23.7104, 90.4074]
-            },
-            {
-                name: "Chandanpura Mosque",
-                coords: [22.3351, 91.8347]
-            },
-            {
-                name: "Bayazid Bostami Mosque",
-                coords: [22.3744, 91.8123]
-            },
-            {
-                name: "Anderkilla Shahi Jame Mosque",
-                coords: [22.3384, 91.8347]
-            },
-            {
-                name: "Kasba Mosque",
-                coords: [23.7206, 91.1121]
-            },
-            {
-                name: "Shah Niamatullah Mosque",
-                coords: [24.8583, 88.1333]
-            },
-            {
-                name: "Lalbagh Fort Mosque",
-                coords: [23.7181, 90.3884]
-            },
-            {
-                name: "Chhota Katra Mosque",
-                coords: [23.7099, 90.4071]
-            },
-            {
-                name: "Boro Katra Mosque",
-                coords: [23.7098, 90.4070]
-            },
-            {
-                name: "Shah Sultan Mosque",
-                coords: [24.7500, 89.3750]
-            },
-            {
-                name: "Shah Mokhdum Mosque",
-                coords: [24.3667, 88.6000]
-            },
-            {
-                name: "Shah Jalal Dargah Mosque",
-                coords: [24.8998, 91.8719]
-            },
 
-            {
-                name: "Keramatia Mosque",
-                coords: [25.7439, 89.2752]
-            },
-            {
-                name: "Nilphamari Central Mosque",
-                coords: [25.9310, 88.8560]
-            },
-            {
-                name: "Lalmonirhat Central Mosque",
-                coords: [25.9170, 89.4500]
-            },
             {
                 name: "Tangail Central Mosque",
                 coords: [24.2513, 89.9200]
             },
-            {
-                name: "Baitul Mukarram National Mosque",
-                coords: [23.7286, 90.4125]
-            },
 
         ];
 
-        // Add markers
-        mosques.forEach(function (mosque) {
-            L.marker(mosque.coords).addTo(mosqueMap)
-                .bindPopup(`<b>${mosque.name}</b>`)
-                .openPopup();
+        // Add markers to the map
+        mosques.forEach((mosque) => {
+            const marker = L.marker(mosque.coords).addTo(mosqueMap);
+            marker.bindPopup(`<b>${mosque.name}</b>`);
         });
 
     </script>
